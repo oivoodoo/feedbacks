@@ -4,6 +4,9 @@
   top:150px;
   font: 12px Georgia, Verdana, Lucida Sans Unicode, sans-serif;
   color: #6F6F6F;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 #feedbacks.left {
