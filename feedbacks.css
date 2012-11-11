@@ -73,6 +73,11 @@
   -o-transform:scale(1.1); /* Opera */
 }
 
+#dialog {
+  width: inherit !important;
+  height: inherit !important;
+}
+
 /* Dialog */
 #dialog input[type='email'], textarea {
   -webkit-border-radius: 5px;
