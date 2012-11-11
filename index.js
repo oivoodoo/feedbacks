@@ -3,8 +3,8 @@ var $      = require('zepto-component'),
     form   = require('./form');
 
 var Feedbacks = function(options) {
-  if (typeof options.api_key === 'undefined') return;
-  this.api_key = options.api_key;
+  if (typeof options.key === 'undefined') return;
+  this.key = options.key;
 
   this.parse(options)
 
@@ -14,10 +14,38 @@ var Feedbacks = function(options) {
 };
 
 Feedbacks.prototype.form = function() {
+  var context = this;
+
   this.form = $(form);
+  var button = this.form.find('input[type=submit]');
+
+  button.click(function(event) {
+    event.preventDefault();
+
+    var email = context.form.find('input[name=email]');
+    var message = context.form.find('textarea');
+
+    $.ajax({
+      type: 'POST',
+      url: context.url,
+      crossDomain: true,
+      data: {
+        from: email.val(),
+        message: message.val(),
+        key: context.key
+      },
+      dataType: 'json'
+    });
+
+    email.val('');
+    message.val('');
+
+    context.dialog.hide();
+  });
 };
 
 Feedbacks.prototype.parse = function(options) {
+  this.url = options.url || "http://pixie.nko3.jitsu.com/emails";
   this.label = options.label || "Feedback";
   this.class = options.class || "button1";
 };
@@ -36,7 +64,7 @@ Feedbacks.prototype.events = function() {
   $(this.button).click(function(event) {
     event.preventDefault();
 
-    dialog(context.label, context.form)
+    context.dialog = dialog(context.label, context.form)
       .closable()
       .modal()
       .effect('slide')

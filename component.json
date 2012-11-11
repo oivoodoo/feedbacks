@@ -11,7 +11,8 @@
   "development": {},
   "license": "MIT",
   "scripts": [
-    "index.js", "form.js"
+    "index.js",
+    "form.js"
   ],
   "styles": [
     "feedbacks.css"
