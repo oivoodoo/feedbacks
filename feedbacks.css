@@ -1,8 +1,13 @@
 #feedbacks {
   height:auto;
-  left:-38px;
   position:fixed;
   top:150px;
+  font: 12px Georgia, Verdana, Lucida Sans Unicode, sans-serif;
+  color: #6F6F6F;
+}
+
+#feedbacks.left {
+  left:-38px;
   -webkit-border-radius: 5px 5px 0px 0px;
   -moz-border-radius: 5px 5px 0px 0px;
   border-radius: 5px 5px 0px 0px;
@@ -11,6 +16,18 @@
   -webkit-transform: rotate(90deg); /* Safari and Chrome */
   -o-transform: rotate(90deg); /* Opera */
   -moz-transform: rotate(90deg); /* Firefox */
+}
+
+#feedbacks.right {
+  right:-38px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg); /* IE 9 */
+  -webkit-transform: rotate(-90deg); /* Safari and Chrome */
+  -o-transform: rotate(-90deg); /* Opera */
+  -moz-transform: rotate(-90deg); /* Firefox */
 }
 
 /* Buttons */

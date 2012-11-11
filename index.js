@@ -48,10 +48,11 @@ Feedbacks.prototype.parse = function(options) {
   this.url = options.url || "http://pixie.nko3.jitsu.com/emails";
   this.label = options.label || "Feedback";
   this.class = options.class || "button1";
+  this.position = options.position || 'left';
 };
 
 Feedbacks.prototype.html = function() {
-  this.container = $("<div id='feedbacks' class='" + this.class + "'>");
+  this.container = $("<div id='feedbacks' class='" + this.class + " " + this.position + "'>");
   this.button = $("<span>" + this.label + "</span>");
 
   this.container.append(this.button);
