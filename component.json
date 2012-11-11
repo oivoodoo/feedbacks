@@ -5,7 +5,8 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-    "component/zepto": "*"
+    "component/zepto": "*",
+    "oivoodoo/dialog": "*"
   },
   "development": {},
   "license": "MIT",
@@ -16,4 +17,3 @@
     "feedbacks.css"
   ]
 }
-

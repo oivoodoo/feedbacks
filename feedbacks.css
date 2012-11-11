@@ -1,21 +1,57 @@
 #feedbacks
 {
-  height:170px;
-  left:0;
+  height:auto;
+  left:-38px;
   position:fixed;
   top:150px;
-  width:40px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari and Chrome */
+  -o-transform: rotate(90deg); /* Opera */
+  -moz-transform: rotate(90deg); /* Firefox */
 }
 
-div#feedbacks:hover
-{
-  background-position:-41px 0px;
+/* Buttons */
+#feedbacks.button1 {
+  background: rgba(131, 178, 51, 0.65);
 }
 
-#feedbacks a
+ #feedbacks.button2 {
+  background: rgba(196, 89, 30, 0.65);
+}
+
+#feedbacks.button3 {
+  background: rgba(65, 117, 160, 0.65):
+}
+
+#feedbacks.button4 {
+  background: rgba(115, 62, 78, 0.65);
+}
+
+#feedbacks span
 {
+  text-shadow: rgba(6, 6, 6, 0.598) 1px 1px;
   display:block;
-  height:170px;
-  width:40px;
+  font-size: 20px;
+  color: #666;
+  width: auto;
+  height: auto;
+  padding: 5px 15px;
+}
+
+#feedbacks span:hover {
+  color: white;
+  transition: all height .2s ease-in-out;
+  -moz-transition: all height .2s ease-in-out; /* Firefox 4 */
+  -webkit-transition: all height .2s ease-in-out; /* Safari and Chrome */
+  -o-transition: all height .2s ease-in-out; /* Opera */
+  transform:scale(1.1);
+  -ms-transform:scale(1.1); /* IE 9 */
+  -moz-transform:scale(1.1); /* Firefox */
+  -webkit-transform:scale(1.1); /* Safari and Chrome */
+  -o-transform:scale(1.1); /* Opera */
 }
 
