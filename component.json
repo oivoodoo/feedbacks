@@ -1,0 +1,19 @@
+{
+  "name": "feedbacks",
+  "repo": "oivoodoo/feedbacks",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/zepto": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "feedbacks.css"
+  ]
+}
+

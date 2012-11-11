@@ -1,0 +1,21 @@
+#feedbacks
+{
+  height:170px;
+  left:0;
+  position:fixed;
+  top:150px;
+  width:40px;
+}
+
+div#feedbacks:hover
+{
+  background-position:-41px 0px;
+}
+
+#feedbacks a
+{
+  display:block;
+  height:170px;
+  width:40px;
+}
+
