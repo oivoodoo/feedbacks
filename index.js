@@ -1,4 +1,6 @@
-var $ = require('zepto-component');
+var $      = require('zepto-component'),
+    dialog = require('dialog'),
+    form   = require('./form');
 
 var Feedbacks = function(options) {
   if (typeof options.api_key === 'undefined') return;
@@ -6,8 +8,13 @@ var Feedbacks = function(options) {
 
   this.parse(options)
 
+  this.form();
   this.html();
   this.events();
+};
+
+Feedbacks.prototype.form = function() {
+  this.form = $(form);
 };
 
 Feedbacks.prototype.parse = function(options) {
@@ -24,10 +31,16 @@ Feedbacks.prototype.html = function() {
 };
 
 Feedbacks.prototype.events = function() {
+  var context = this;
+
   $(this.button).click(function(event) {
     event.preventDefault();
 
-    console.log('test');
+    dialog(context.label, context.form)
+      .closable()
+      .modal()
+      .effect('slide')
+      .show();
   });
 };
 
